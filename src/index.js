@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import DefaultTheme from './themes/bootstrap3'
+import MaterialUITheme from './themes/material-ui'
 import { reduxForm } from 'redux-form'
 import renderFields from './renderFields'
 import renderField from './renderField'
@@ -48,4 +49,4 @@ Liform.propTypes = {
 
 export default Liform
 
-export { renderFields, renderField, processSubmitErrors, DefaultTheme, setError }
+export { renderFields, renderField, processSubmitErrors, DefaultTheme, setError, MaterialUITheme}
