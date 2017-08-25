@@ -120,6 +120,10 @@ const SearchWidget = props => (
     <BaseInputWidget type="search" {...props} />
 )
 
+const PercentWidget = props => (
+    <BaseInputWidget type="number" normalize={parseFloat} {...props} />
+)
+
 export default {
     object: ObjectWidget,
     string: StringWidget,
@@ -128,6 +132,7 @@ export default {
     date: DatePickerWidget,
     time: TimePickerWidget,
     choice: SelectFieldWidget,
+    percent: PercentWidget,
     textarea: TextareaWidget,
     url: UrlWidget,
     search: SearchWidget,
