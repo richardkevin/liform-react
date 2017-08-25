@@ -116,6 +116,10 @@ const UrlWidget = props => (
     <BaseInputWidget type="url" {...props} />
 )
 
+const SearchWidget = props => (
+    <BaseInputWidget type="search" {...props} />
+)
+
 export default {
     object: ObjectWidget,
     string: StringWidget,
@@ -126,4 +130,5 @@ export default {
     choice: SelectFieldWidget,
     textarea: TextareaWidget,
     url: UrlWidget,
+    search: SearchWidget,
 }
