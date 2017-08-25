@@ -124,6 +124,10 @@ const PercentWidget = props => (
     <BaseInputWidget type="number" normalize={parseFloat} {...props} />
 )
 
+const PasswordWidget = props => (
+    <BaseInputWidget type="password" {...props} />
+)
+
 export default {
     object: ObjectWidget,
     string: StringWidget,
@@ -132,6 +136,7 @@ export default {
     date: DatePickerWidget,
     time: TimePickerWidget,
     choice: SelectFieldWidget,
+    password: PasswordWidget,
     percent: PercentWidget,
     textarea: TextareaWidget,
     url: UrlWidget,
