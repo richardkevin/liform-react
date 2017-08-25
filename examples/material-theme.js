@@ -18,7 +18,8 @@ var schema ={
       "properties": {
         "street_address": { "type": "string" },
         "city":           { "type": "string" },
-        "state":          { "type": "string" }
+        "state":          { "type": "string" },
+        'date': { 'type': 'string', 'widget': 'date' }
       },
       "required": ["street_address", "city", "state"]
     }

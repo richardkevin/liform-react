@@ -18,9 +18,7 @@ import {
 
 const BaseInputWidget = props => {
     const { fieldName, label, schema, theme, context, ...rest } = props
-    if (props.schema.format) {
-        return <DatePickerWidget {...props} />
-    }
+
     return (
         <Field
             name={fieldName}
@@ -52,17 +50,18 @@ const CheckboxWidget = props => {
 }
 
 const DatePickerWidget = props => {
-  return (
-    <Field
-      name={props.fieldName}
-      component={DatePicker}
-      disabled={props.schema.hasOwnProperty("readOnly")}
-      label={props.label}
-      floatingLabelText={props.label}
-      floatingLabelFixed={true}
-      fullWidth
-    />
-  )
+    return (
+      <Field
+        name={props.fieldName}
+        component={DatePicker}
+        disabled={props.schema.hasOwnProperty('readOnly')}
+        label={props.label}
+        floatingLabelText={props.label}
+        floatingLabelFixed={true}
+        fullWidth
+        {...props}
+      />
+    )
 }
 
 const TimePickerWidget = props => {
