@@ -35,6 +35,12 @@ const BaseInputWidget = props => {
   )
 }
 
+const StringWidget = (props) => {
+    return (
+        <BaseInputWidget type="text" {...props} />
+    )
+}
+
 const CheckboxWidget = props => {
   return (
     <Field name={props.fieldName} component={Checkbox} label={props.label} />
@@ -103,11 +109,11 @@ const ObjectWidget = props =>  {
 }
 
 export default {
-  object: ObjectWidget,
-  string: BaseInputWidget,
-  number: BaseInputWidget,
-  boolean: CheckboxWidget,
-  date: DatePickerWidget,
-  time: TimePickerWidget,
-  choice: SelectFieldWidget,
+    object: ObjectWidget,
+    string: StringWidget,
+    number: BaseInputWidget,
+    boolean: CheckboxWidget,
+    date: DatePickerWidget,
+    time: TimePickerWidget,
+    choice: SelectFieldWidget,
 }
