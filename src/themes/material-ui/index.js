@@ -17,7 +17,6 @@ import {
 } from "redux-form-material-ui"
 
 const BaseInputWidget = props => {
-  let type = props.schema.type
   if (props.schema.format) {
     return <DatePickerWidget {...props} />
   }
@@ -29,7 +28,7 @@ const BaseInputWidget = props => {
       floatingLabelText={props.label}
       floatingLabelFixed={true}
       disabled={props.schema.hasOwnProperty("readOnly")}
-      type={type}
+      type={props.type}
       fullWidth
     />
   )
@@ -108,6 +107,10 @@ const ObjectWidget = props =>  {
     )
 }
 
+const UrlWidget = props => (
+    <BaseInputWidget type="url" {...props} />
+)
+
 export default {
     object: ObjectWidget,
     string: StringWidget,
@@ -116,4 +119,5 @@ export default {
     date: DatePickerWidget,
     time: TimePickerWidget,
     choice: SelectFieldWidget,
+    url: UrlWidget,
 }
