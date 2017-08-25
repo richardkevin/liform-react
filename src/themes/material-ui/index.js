@@ -17,21 +17,22 @@ import {
 } from "redux-form-material-ui"
 
 const BaseInputWidget = props => {
-  if (props.schema.format) {
-    return <DatePickerWidget {...props} />
-  }
-  return (
-    <Field
-      name={props.fieldName}
-      component={TextField}
-      hintText={props.label}
-      floatingLabelText={props.label}
-      floatingLabelFixed={true}
-      disabled={props.schema.hasOwnProperty("readOnly")}
-      type={props.type}
-      fullWidth
-    />
-  )
+    const { fieldName, label, ...rest } = props
+    if (props.schema.format) {
+        return <DatePickerWidget {...props} />
+    }
+    return (
+        <Field
+            name={fieldName}
+            component={TextField}
+            hintText={label}
+            floatingLabelText={label}
+            floatingLabelFixed={true}
+            disabled={props.schema.hasOwnProperty("readOnly")}
+            fullWidth
+            {...rest}
+        />
+    )
 }
 
 const StringWidget = (props) => {
@@ -39,6 +40,10 @@ const StringWidget = (props) => {
         <BaseInputWidget type="text" {...props} />
     )
 }
+
+const TextareaWidget = props => (
+    <BaseInputWidget multiLine {...props} />
+)
 
 const CheckboxWidget = props => {
   return (
@@ -119,5 +124,6 @@ export default {
     date: DatePickerWidget,
     time: TimePickerWidget,
     choice: SelectFieldWidget,
+    textarea: TextareaWidget,
     url: UrlWidget,
 }
