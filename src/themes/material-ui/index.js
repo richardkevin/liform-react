@@ -17,7 +17,7 @@ import {
 } from "redux-form-material-ui"
 
 const BaseInputWidget = props => {
-    const { fieldName, label, ...rest } = props
+    const { fieldName, label, schema, theme, context, ...rest } = props
     if (props.schema.format) {
         return <DatePickerWidget {...props} />
     }
