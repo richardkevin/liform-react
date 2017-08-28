@@ -19,7 +19,8 @@ var schema ={
         "street_address": { "type": "string" },
         "city":           { "type": "string" },
         "state":          { "type": "string" },
-        'date': { 'type': 'string', 'widget': 'date' }
+        'date': { 'type': 'string', 'widget': 'date' },
+        'email': { 'type': 'string', 'widget': 'email', 'format': 'email' }
       },
       "required": ["street_address", "city", "state"]
     }

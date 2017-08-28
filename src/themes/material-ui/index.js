@@ -127,12 +127,17 @@ const PasswordWidget = props => (
     <BaseInputWidget type="password" {...props} />
 )
 
+const EmailWidget = props => (
+    <BaseInputWidget type="email" {...props} />
+)
+
 export default {
     object: ObjectWidget,
     string: StringWidget,
     number: BaseInputWidget,
     boolean: CheckboxWidget,
     date: DatePickerWidget,
+    email: EmailWidget,
     time: TimePickerWidget,
     choice: SelectFieldWidget,
     password: PasswordWidget,
