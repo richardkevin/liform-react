@@ -80,27 +80,27 @@ const TimePickerWidget = props => {
 }
 
 const SelectFieldWidget = props => {
-  let MenuItems = <div />
-  if (props.schema.hasOwnProperty("enum")) {
-    const options = props.schema["enum"]
-    MenuItems = options.map(value =>
-      <MenuItem key={value} value={value} primaryText={value} />
-    )
-  }
+    let MenuItems = <div />
+    const options = props.schema['enum']
+    if (options !== undefined) {
+        MenuItems = options.map(value =>
+          <MenuItem key={value} value={value} primaryText={value} />
+        )
+    }
 
-  return (
-    <Field
-      name={props.fieldName}
-      component={SelectField}
-      label={props.label}
-      hintText={props.label}
-      floatingLabelText={props.label}
-      floatingLabelFixed={true}
-      fullWidth
-    >
-      {MenuItems}
-    </Field>
-  )
+    return (
+      <Field
+        name={props.fieldName}
+        component={SelectField}
+        label={props.label}
+        hintText={props.label}
+        floatingLabelText={props.label}
+        floatingLabelFixed={true}
+        fullWidth
+      >
+        {MenuItems}
+      </Field>
+    )
 }
 
 const ObjectWidget = props =>  {
