@@ -120,10 +120,6 @@ const SearchWidget = props => (
     <BaseInputWidget type="search" {...props} />
 )
 
-const PercentWidget = props => (
-    <BaseInputWidget type="number" normalize={parseFloat} {...props} />
-)
-
 const PasswordWidget = props => (
     <BaseInputWidget type="password" {...props} />
 )
@@ -133,7 +129,7 @@ const EmailWidget = props => (
 )
 
 const NumberWidget = props => (
-    <BaseInputWidget type="number" normalizer={parseFloat} {...props} />
+    <BaseInputWidget type="number" normalize={parseFloat} {...props} />
 )
 
 export default {
@@ -147,9 +143,10 @@ export default {
     time: TimePickerWidget,
     choice: SelectFieldWidget,
     password: PasswordWidget,
-    percent: PercentWidget,
+    percent: NumberWidget,
     textarea: TextareaWidget,
     url: UrlWidget,
+    money: NumberWidget,
     search: SearchWidget,
     oneOf: OneOfChoiceWidget,
 }
