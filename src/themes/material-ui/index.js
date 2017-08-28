@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Field } from "redux-form"
 import renderFields from '../../renderFields'
 import MenuItem from "material-ui/MenuItem"
+import OneOfChoiceWidget from "./oneOfChoiceWidget"
 
 import {
   AutoComplete,
@@ -150,4 +151,5 @@ export default {
     textarea: TextareaWidget,
     url: UrlWidget,
     search: SearchWidget,
+    oneOf: OneOfChoiceWidget,
 }
