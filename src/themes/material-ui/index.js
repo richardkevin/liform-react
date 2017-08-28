@@ -131,10 +131,15 @@ const EmailWidget = props => (
     <BaseInputWidget type="email" {...props} />
 )
 
+const NumberWidget = props => (
+    <BaseInputWidget type="number" normalizer={parseFloat} {...props} />
+)
+
 export default {
     object: ObjectWidget,
     string: StringWidget,
-    number: BaseInputWidget,
+    number: NumberWidget,
+    integer: NumberWidget,
     boolean: CheckboxWidget,
     date: DatePickerWidget,
     email: EmailWidget,
