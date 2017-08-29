@@ -5,6 +5,11 @@ import BaseInputWidget from './BaseInputWidget'
 
 
 const processFile = (onChange, e) => {
+    if (e.target.files.length === 0) {
+        onChange(null)
+        return
+    }
+
     let reader  = new FileReader()
     reader.addEventListener('load', () => onChange(reader.result), false)
     reader.readAsDataURL(e.target.files[0])
