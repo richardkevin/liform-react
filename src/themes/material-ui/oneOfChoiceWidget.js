@@ -36,7 +36,8 @@ class OneOfChoiceWidget extends Component {
                 <SelectField
                     fullWidth={true}
                     value={this.state.choice}
-                    floatingLabelFixed={schema.title}
+                    floatingLabelText={schema.title}
+                    floatingLabelFixed={true}
                     onChange={this.selectItem}
                 >
                     {schema.oneOf.map((item, idx) => <MenuItem key={idx} value={idx} primaryText={item.title || idx} />)}
