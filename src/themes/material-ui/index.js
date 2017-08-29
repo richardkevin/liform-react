@@ -2,6 +2,7 @@ import BaseInputWidget from './BaseInputWidget'
 import CheckboxWidget from './CheckboxWidget'
 import DatePickerWidget from './DatePickerWidget'
 import EmailWidget from './EmailWidget'
+import FileWidget from './FileWidget'
 import NumberWidget from './NumberWidget'
 import ObjectWidget from './ObjectWidget'
 import OneOfChoiceWidget from './oneOfChoiceWidget'
@@ -21,6 +22,7 @@ export default {
     boolean: CheckboxWidget,
     date: DatePickerWidget,
     email: EmailWidget,
+    file: FileWidget,
     time: TimePickerWidget,
     choice: SelectFieldWidget,
     password: PasswordWidget,
