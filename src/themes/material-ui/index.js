@@ -1,4 +1,3 @@
-import BaseInputWidget from './BaseInputWidget'
 import CheckboxWidget from './CheckboxWidget'
 import DatePickerWidget from './DatePickerWidget'
 import EmailWidget from './EmailWidget'
@@ -15,21 +14,21 @@ import TimePickerWidget from './TimePickerWidget'
 import UrlWidget from './UrlWidget'
 
 export default {
-    object: ObjectWidget,
-    string: StringWidget,
-    number: NumberWidget,
-    integer: NumberWidget,
     boolean: CheckboxWidget,
+    choice: SelectFieldWidget,
     date: DatePickerWidget,
     email: EmailWidget,
     file: FileWidget,
-    time: TimePickerWidget,
-    choice: SelectFieldWidget,
+    integer: NumberWidget,
+    money: NumberWidget,
+    number: NumberWidget,
+    object: ObjectWidget,
+    oneOf: OneOfChoiceWidget,
     password: PasswordWidget,
     percent: NumberWidget,
-    textarea: TextareaWidget,
-    url: UrlWidget,
-    money: NumberWidget,
     search: SearchWidget,
-    oneOf: OneOfChoiceWidget,
+    string: StringWidget,
+    textarea: TextareaWidget,
+    time: TimePickerWidget,
+    url: UrlWidget,
 }
