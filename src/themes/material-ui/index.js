@@ -1,4 +1,5 @@
 import CheckboxWidget from './CheckboxWidget'
+import ColorWidget from './ColorWidget'
 import DatePickerWidget from './DatePickerWidget'
 import EmailWidget from './EmailWidget'
 import FileWidget from './FileWidget'
@@ -14,8 +15,8 @@ import TimePickerWidget from './TimePickerWidget'
 import UrlWidget from './UrlWidget'
 
 export default {
-    boolean: CheckboxWidget,
     choice: SelectFieldWidget,
+    color: ColorWidget,
     date: DatePickerWidget,
     email: EmailWidget,
     file: FileWidget,

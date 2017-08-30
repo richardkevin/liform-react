@@ -22,6 +22,7 @@ var schema ={
         'date': { 'type': 'string', 'widget': 'date' },
         'email': { 'type': 'string', 'widget': 'email', 'format': 'email' },
         'number': { 'type': 'number', 'widget': 'number' },
+        'color': { 'type': 'string', 'widget': 'color' },
       },
       "required": ["street_address", "city", "state"]
     }
